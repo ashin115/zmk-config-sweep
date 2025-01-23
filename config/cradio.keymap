@@ -39,7 +39,7 @@
 
         combo_semi {
             timeout-ms = <50>;
-            key-positions = <28 29>;
+            key-positions = <27 28>;
             bindings = <&kp SEMI>;
         };
     };
@@ -70,8 +70,8 @@
         //│ INSERT   │  1       │  2       │  3       │          │   │ HOME     │ PAGE DN  │    UP    │ END      │  :       │
             &kp INS    &kp N1     &kp N2     &kp N3     &trans         &kp HOME   &kp PG_DN  &kp UP     &kp END    &kp COLON
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-        //│ DELETE   │  4       │  5       │  6       │          │   │ LEFT     │ LEFT     │ DOWN       │ RIGHT    │  ;       │
-            &kp DEL    &kp N4     &kp N5     &kp N6     &trans         &kp PG_UP  &kp LEFT   &kp DOWN   &kp RIGHT   &kp SEMI
+        //│ DELETE   │  4       │  5       │  6       │          │   │ ESC      │ LEFT     │ DOWN     │ RIGHT    │  ;       │
+            &kp DEL    &kp N4     &kp N5     &kp N6     &kp TAB         &kp ESC  &kp LEFT   &kp DOWN   &kp RIGHT   &kp SEMI
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│ CAPS     │  7       │  8       │  9       │  0       │   │          │          │          │          │          │
            &caps_word  &kp N7     &kp N8     &kp N9     &kp N0         &trans     &trans     &trans     &trans     &trans
