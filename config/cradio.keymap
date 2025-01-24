@@ -71,7 +71,7 @@
             &kp N1    &kp N2     &kp N3     &kp N4     &kp N5         &kp N6     &kp N7     &kp N8     &kp N9     &kp N0
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│ DELETE   │  MUTE    │ VOL DOWN │  VOL UP  │ ESC      │   │          │ TAB      │   UP     │          │  ;       │
-            &kp DEL  &kp C_MUTE  &kp C_VOL_DN &kp C_VOL_UP &kp ESC     &trans   &kp TAB     &kp UP     &kp trans   &kp SEMI
+            &kp DEL   &trans     &trans      &trans    &kp ESC         &trans    &kp TAB     &kp UP     &kp trans   &kp SEMI
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│ CAPS     │  7       │  8       │  9       │  0       │   │          │          │          │          │          │
            &caps_word  &kp N7     &kp N8     &kp N9     &kp N0         &trans     &kp LEFT  &kp DOWN   &kp RIGHT  &trans
