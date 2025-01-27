@@ -20,6 +20,16 @@
             require-prior-idle-ms = <125>;
             bindings = <&kp>, <&kp>;
         };
+        lt: hold_tap {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            flavor = "tap-preferred";
+            tapping-term-ms = <280>;
+            quick-tap-ms = <180>;
+            require-prior-idle-ms = <125>;
+            bindings = <&kp>, <&kp>;
+        };
+ 
     };
 
     conditional_layers {
