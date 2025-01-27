@@ -9,6 +9,13 @@
 #define HRML(k1,k2,k3,k4) &ht LSHFT k1  &ht LALT k2  &ht LCTRL k3  &ht LGUI k4
 #define HRMR(k1,k2,k3,k4) &ht RGUI k1  &ht RCTRL k2  &ht RALT k3  &ht RSHFT k4
 
+&lt {
+    tapping-term-ms = <280>;
+    quick-tap-ms = <180>;
+    require-prior-idle-ms = <125>;
+};
+
+
 / {
     behaviors {
         ht: hold_tap {
@@ -20,14 +27,6 @@
             require-prior-idle-ms = <125>;
             bindings = <&kp>, <&kp>;
         };
-
-        &lt {
-            tapping-term-ms = <280>;
-            quick-tap-ms = <180>;
-            require-prior-idle-ms = <125>;
-        };
-
-
     };
 
     conditional_layers {
