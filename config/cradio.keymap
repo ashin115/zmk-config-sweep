@@ -28,7 +28,7 @@
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
             flavor = "tap-preferred";
-            tapping-term-ms = <280>;
+            tapping-term-ms = <250>;
             quick-tap-ms = <180>;
             require-prior-idle-ms = <125>;
             bindings = <&kp>, <&kp>;
@@ -38,8 +38,8 @@
     conditional_layers {
         compatible = "zmk,conditional-layers";
         tri_layer {
-            if-layers = <1 2>;
-            then-layer = <3>;
+            if-layers = <3 2>;
+            then-layer = <4>;
         };
     };
         combos {
@@ -72,9 +72,21 @@
         //│  Z       │  X       │  C       │  V       │  B       │   │  N       │  M       │ , <      │ . >      │ / ?      │
             &kp Z      &kp X      &kp C      &kp V      &kp B          &kp N      &kp M      &kp COMMA  &kp DOT    &kp FSLH
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
-                                            &sk LSHFT  &lt 2 ENTER     &lt 1 SPACE  &kp BSPC
+                                            &sk LSHFT  &lt 3 ENTER     &lt 2 SPACE  &kp BSPC
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
             >;
+        };
+
+        colemak {
+
+            bindings = <
+            &kp Q    &kp W   &kp F     &kp P     &kp B                &kp J     &kp L   &kp U     &kp Y     &kp SQT     
+            &mt A    &mt R   &mt S     &mt T     &kp G                &kp M     &mt N   &mt  E    &mt  I    &mt  O  
+            &kp Z    &mt X   &kp C     &kp D     &kp V                &kp K     &kp H   &kp CMM   &mt DOT   &kp FSLH    
+
+                                          &sk LSHFT  &lt 3 ENTER     &lt 2 SPACE  &kp BSPC
+            >;
+
         };
 
         right_layer {
@@ -118,7 +130,7 @@
            &sys_reset  &trans     &trans     &trans    &bt BT_SEL 0    &kp F1     &kp F2     &kp F3     &kp F4    &sys_reset
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│BOOTLOADER│          │          │          │PROFILE 1 │   │          │          │          │          │BOOTLOADER│
-          &bootloader  &trans     &trans     &trans    &bt BT_SEL 1    &kp F5     &kp F6     &kp F7     &kp F8    &bootloader
+          &bootloader  &trans     &trans     &tog 2   &bt BT_SEL 1    &kp F5     &kp F6     &kp F7     &kp F8    &bootloader
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│          │          │          │ CLEAR BT │PROFILE 2 │   │          │          │          │          │          │
             &trans     &trans     &trans    &bt BT_CLR &bt BT_SEL 2    &kp F9     &kp F10     &kp F11   &kp F12   
