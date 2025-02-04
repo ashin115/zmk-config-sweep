@@ -81,8 +81,8 @@
 
             bindings = <
             &kp Q    &kp W   &kp F     &kp P     &kp B                &kp J     &kp L   &kp U     &kp Y     &kp SQT     
-            &mt A    &mt R   &mt S     &mt T     &kp G                &kp M     &mt N   &mt  E    &mt  I    &mt  O  
-            &kp Z    &mt X   &kp C     &kp D     &kp V                &kp K     &kp H   &kp CMM   &mt DOT   &kp FSLH    
+            &kp A    &kp R   &kp S     &kp T     &kp G                &kp M     &kp N   &kp  E    &kp  I    &kp  O  
+            &kp Z    &kp X   &kp C     &kp D     &kp V                &kp K     &kp H   &kp COMMA   &kp DOT   &kp FSLH    
 
                                           &sk LSHFT  &lt 3 ENTER     &lt 2 SPACE  &kp BSPC
             >;
