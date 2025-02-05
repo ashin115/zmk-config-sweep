@@ -7,6 +7,9 @@
 
 // Home row mods macro
 #define HRML(k1,k2,k3,k4) &ht LSHFT k1  &ht LALT k2  &ht LCTRL k3  &ht LGUI k4
+#define HRML(k1,k2,k3,k4) &ht LSHFT k1  &ht LALT k2  &ht LCTRL k3  &ht LGUI k4
+
+#define HRMR(k1,k2,k3,k4) &ht RGUI k1  &ht RCTRL k2  &ht RALT k3  &ht RSHFT k4
 #define HRMR(k1,k2,k3,k4) &ht RGUI k1  &ht RCTRL k2  &ht RALT k3  &ht RSHFT k4
 
 &lt {
@@ -53,8 +56,14 @@
         compatible = "zmk,combos";
         combo_esc {
             timeout-ms = <50>;
-            key-positions = <0 1>;
+            key-positions = <12 13>;
             bindings = <&kp ESC>;
+        };
+
+        combo_tab {
+            timeout-ms = <50>;
+            key-positions = <16 17>;
+            bindings = <&kp TAB>;
         };
 
         combo_semi {
@@ -103,7 +112,7 @@
             &kp N1    &kp N2     &kp N3     &kp N4     &kp N5         &kp N6     &kp N7     &kp N8     &kp N9     &kp N0
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│ DELETE   │  MUTE    │ VOL DOWN │  VOL UP  │ ESC      │   │          │ TAB      │   UP     │          │  ;       │
-            &kp DEL   &kp C_MUTE &kp C_VOL_DN  &kp C_VOL_UP  &kp ESC  &trans    &kp TAB     &kp UP     &trans   &kp SEMI
+            &kp DEL   &kp C_MUTE &kp C_VOL_DN  &kp C_VOL_UP  &kp ESC  &kp LEFT    &kp DOWN     &kp UP     &RIGHT   &kp SEMI
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│ CAPS     │  7       │  BR DN   │  BR UP   │  0       │   │          │          │          │          │          │
            &caps_word  &kp N7    &kp C_BRI_DN  &kp C_BRI_UP  &kp N0     &trans     &kp LEFT  &kp DOWN   &kp RIGHT  &trans
