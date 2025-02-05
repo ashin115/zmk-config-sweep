@@ -7,9 +7,7 @@
 
 // Home row mods macro
 #define HRML(k1,k2,k3,k4) &ht LSHFT k1  &ht LALT k2  &ht LCTRL k3  &ht LGUI k4
-#define HRML(k1,k2,k3,k4) &ht LSHFT k1  &ht LALT k2  &ht LCTRL k3  &ht LGUI k4
 
-#define HRMR(k1,k2,k3,k4) &ht RGUI k1  &ht RCTRL k2  &ht RALT k3  &ht RSHFT k4
 #define HRMR(k1,k2,k3,k4) &ht RGUI k1  &ht RCTRL k2  &ht RALT k3  &ht RSHFT k4
 
 &lt {
@@ -31,7 +29,7 @@
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
             flavor = "tap-preferred";
-            tapping-term-ms = <250>;
+            tapping-term-ms = <280>;
             quick-tap-ms = <180>;
             require-prior-idle-ms = <125>;
             bindings = <&kp>, <&kp>;
@@ -97,7 +95,7 @@
 
             bindings = <
             &kp Q    &kp W   &kp F     &kp P     &kp B                &kp J     &kp L   &kp U     &kp Y     &kp SQT     
-            &kp A    &kp R   &kp S     &kp T     &kp G                &kp M     &kp N   &kp  E    &kp  I    &kp  O  
+           HRML(  A,   R,    S,      T)     &kp G                &kp M    HRMR( N,     E,      I,      O)  
             &kp Z    &kp X   &kp C     &kp D     &kp V                &kp K     &kp H   &kp COMMA   &kp DOT   &kp FSLH    
 
                                           &sk LSHFT  &lt 3 ENTER     &lt 2 SPACE  &kp BSPC
