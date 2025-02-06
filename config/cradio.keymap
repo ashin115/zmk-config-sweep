@@ -69,6 +69,11 @@
             key-positions = <27 28>;
             bindings = <&kp SEMI>;
         };
+        combo_mod {
+            timeout-ms = <50>;
+            key-positions = <16 17 18>;
+            bindings = <&tog 5>;
+        };
     };
 
 
@@ -94,9 +99,9 @@
         colemak {
 
             bindings = <
-            &kp Q    &kp W   &kp F     &kp P     &kp B                &kp J     &kp L   &kp U     &kp Y     &kp SQT     
-           HRML(  A,   R,    S,      T)     &kp G                &kp M    HRMR( N,     E,      I,      O)  
-            &kp Z    &kp X   &kp C     &kp D     &kp V                &kp K     &kp H   &kp COMMA   &kp DOT   &kp FSLH    
+            &kp Q    &kp W   &kp F     &kp P     &kp G                &kp J     &kp L   &kp U     &kp Y     &kp SQT     
+           HRML(  A,   R,    S,      T)     &kp D                &kp H    HRMR( N,     E,      I,      O)  
+            &kp Z    &kp X   &kp C     &kp V     &kp B                &kp K     &kp H   &kp COMMA   &kp DOT   &kp FSLH    
 
                                           &sk LSHFT  &lt 3 ENTER     &lt 2 SPACE  &kp BSPC
             >;
@@ -148,6 +153,23 @@
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│          │          │          │ CLEAR BT │PROFILE 2 │   │          │          │          │          │          │
             &trans     &trans     &trans    &bt BT_CLR &bt BT_SEL 2    &kp F9     &kp F10     &kp F11   &kp F12   
+        //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
+                                             &trans     &trans         &trans     &trans
+        //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
+            >;
+        };
+
+        mod_layer {
+            bindings = <
+        //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
+        //│          │  [       │  {       │  }       │          │   │  ^       │  (       │  )       │  ]       │  ~       │
+            &trans     &kp LBKT   &kp LBRC   &kp RBRC   &trans         &kp CARET  &kp LPAR   &kp RPAR   &kp RBKT   &kp TILDE
+        //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
+        //│  !       │  @       │  #       │  $       │  %       │   │  *       │  -       │  =       │  \       │  `       │
+            &kp EXCL   &kp AT     &kp HASH   &kp DLLR   &kp PRCNT      &kp ASTRK  &sk RGUI  &sk RCTRL  &sk RALT   &sk RSHFT
+        //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
+        //│          │          │          │          │          │   │  &       │  _       │  +       │  │       │          │
+            &trans     &trans     &trans     &trans     &trans         &kp AMPS   &kp UNDER  &kp PLUS   &kp PIPE   &trans
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
                                              &trans     &trans         &trans     &trans
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
