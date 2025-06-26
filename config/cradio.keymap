@@ -20,8 +20,7 @@
     quick-release;
 };
 
-/
-{
+/ {
     behaviors {
         ht: hold_tap {
             compatible = "zmk,behavior-hold-tap";
@@ -37,6 +36,11 @@
             #binding-cells = <1>;
             display-name = "Toggle Layer On";
             toggle-mode = "on";
+        };
+        
+        caps_word: caps_word {
+            compatible = "zmk,behavior-caps-word";
+            #binding-cells = <0>;
         };
     };
 
