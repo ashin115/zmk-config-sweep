@@ -79,6 +79,7 @@
     keymap {
         compatible = "zmk,keymap";
         default_layer {
+            display-name = "Base";
             bindings = <
         //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
         //│  Q       │  W       │  E       │  R       │  T       │   │  Y       │  U       │  I       │  O       │  P       │
@@ -96,6 +97,7 @@
         };
 
         right_layer {
+            display-name = "Numbers";
             bindings = <
             &kp N1    &kp N2    &kp N3    &kp N4    &kp N5     &kp N6    &kp N7    &kp N8    &kp N9    &kp N0
             &kp DEL   &kp C_MUTE &kp C_VOL_DN &kp C_VOL_UP &kp ESC   &kp LEFT  &kp DOWN  &kp UP    &kp RIGHT &kp SEMI
@@ -105,6 +107,7 @@
         };
 
         left_layer {
+            display-name = "Symbols";
             bindings = <
             &trans   &kp LBKT  &kp LBRC  &kp RBRC  &trans     &kp CARET &kp LPAR  &kp RPAR  &kp RBKT  &kp TILDE
             &kp EXCL &kp AT    &kp HASH  &kp DLLR  &kp PRCNT  &kp ASTRK &kp MINUS &kp EQUAL &kp BSLH  &kp GRAVE
@@ -114,6 +117,7 @@
         };
 
         tri_layer {
+            display-name = "Function";
             bindings = <
             &sys_reset &trans     &trans     &trans     &bt BT_SEL 0   &kp F1    &kp F2    &kp F3    &kp F4    &sys_reset
             &bootloader &trans   &trans     &trans     &bt BT_SEL 1   &kp F5    &kp F6    &kp F7    &kp F8    &bootloader
@@ -123,6 +127,7 @@
         };
 
         mod_layer {
+            display-name = "Mods";
             bindings = <
             &trans   &kp LBKT  &kp LBRC  &kp RBRC  &trans     &kp CARET &kp LPAR  &kp RPAR  &kp RBKT  &kp TILDE
             &kp EXCL &kp AT    &kp HASH  &kp DLLR  &kp PRCNT  &kp ASTRK &sk RGUI  &sk RCTRL &sk RALT  &sk RSHFT
