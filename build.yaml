@@ -21,7 +21,7 @@
 include:
   # Dongle (acts as central/receiver)
   - board: seeeduino_xiao_ble
-    shield: cradio_dongle dongle_screen
+    shield: cradio_dongle prospector_adapter
   - board: nice_nano_v2
     shield: settings_reset
   # Keyboard halves configured as peripherals for the dongle
